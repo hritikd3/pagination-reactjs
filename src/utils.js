@@ -1,5 +1,5 @@
 const paginate = (followers) => {
-  console.log(followers);
+  console.log();
 };
 
 export default paginate;
