@@ -6,11 +6,13 @@ export const useFetch = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
+  console.log(data);
+
   const getProducts = async () => {
     const response = await fetch(url);
     const data = await response.json();
-    paginate(data);
-    setData(data);
+
+    setData(paginate(data));
     setLoading(false);
   };
 
